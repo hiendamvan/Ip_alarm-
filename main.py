@@ -6,7 +6,7 @@ import pandas as pd
 import numpy as np
 load_dotenv()
 
-df = pd.read_csv('data/fixed.csv', on_bad_lines="skip", encoding='utf-8')
+df = pd.read_csv('data/fixed1.csv', on_bad_lines="skip", encoding='utf-8')
 
 def read_and_sample_df(alarm_group_id):
     df_sample= df[df['alarm_group_id']== alarm_group_id]
@@ -42,7 +42,7 @@ for i, alarm_group_id in enumerate(alarm_group_ids):
     Nhiệm vụ: Khi nhận dữ liệu cảnh báo từ một nhóm alarm_group_id, 
     hãy đưa ra một tên nhóm cảnh báo tổng quát,và có tính đại diện 
     cho toàn bộ nhóm. 
-    Chỉ đưa ra tên tổng quát bằng tiếng Anh, không cân giải thích thêm.
+    Chỉ đưa ra tên tổng quát bằng tiếng Việt, không được dùng tiếng Anh, không cân giải thích thêm.
     """},
 
             {"role": "user", "content": f"""
@@ -58,4 +58,4 @@ for i, alarm_group_id in enumerate(alarm_group_ids):
     # print(response.status_code)
     # print(response.json()["choices"][0]["message"]["content"])
     # Save df 
-    df.to_csv('data/fixed.csv', index=False, encoding='utf-8')
+    df.to_csv('data/fixed2.csv', index=False, encoding='utf-8')

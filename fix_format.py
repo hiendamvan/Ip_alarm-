@@ -1,7 +1,7 @@
 import csv
 
-input_file = "ai_ip_alarm_dynamic_history_202508121906.csv"   # file gốc
-output_file = "fixed.csv"  # file sau khi sửa
+input_file = "data/ai_ip_alarm_dynamic_history_202508121906.csv"   # file gốc
+output_file = "fixed1.csv"  # file sau khi sửa
 
 fixed_lines = []
 with open(input_file, "r", encoding="utf-8", errors="ignore") as f:
